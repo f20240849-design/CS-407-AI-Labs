@@ -1,0 +1,68 @@
+======================================================================
+TEST A: Solvable Problem (Original Warehouse Benchmark)
+======================================================================
+Initial State I : ['At(Package, A)', 'At(Robot, A)']
+Goal State G    : ['At(Package, C)']
+============================================================
+PLANNING RESULTS
+============================================================
+Initial State S0: ['At(Package, A)', 'At(Robot, A)']
+------------------------------------------------------------
+RESULT: Found plan of length 4 actions.
+------------------------------------------------------------
+Step 1: Execute PickUp(Package, A)
+        State S1: ['At(Robot, A)', 'Holding(Package)']
+Step 2: Execute Move(A, B)
+        State S2: ['At(Robot, B)', 'Holding(Package)']
+Step 3: Execute Move(B, C)
+        State S3: ['At(Robot, C)', 'Holding(Package)']
+Step 4: Execute Drop(Package, C)
+        State S4: ['At(Package, C)', 'At(Robot, C)']
+============================================================
+Independent Verification Result: PASSED (Valid Plan)
+
+======================================================================
+TEST B: Unsolvable Problem (No PickUp Actions Available)
+======================================================================
+Initial State I : ['At(Package, A)', 'At(Robot, A)']
+Goal State G    : ['At(Package, C)']
+Available Action Types: Move, Drop (PickUp excluded)
+============================================================
+PLANNING RESULTS
+============================================================
+Initial State S0: ['At(Package, A)', 'At(Robot, A)']
+------------------------------------------------------------
+RESULT: No plan found!
+============================================================
+Independent Verification Result: PASSED (Correctly Rejected/No Plan)
+
+======================================================================
+TEST C: Irrelevant Moves & Goal Distinction (Robot at C != Package at C)
+======================================================================
+Initial State I : ['At(Package, A)', 'At(Robot, A)']
+Goal State G    : ['At(Package, C)']
+
+Evaluating Candidate Plan: Move(A, B) -> Move(B, C)
+Checking if robot reaching C satisfies goal At(Package, C)...
+[VERIFIER FAIL] Final state ['At(Package, A)', 'At(Robot, C)'] does NOT satisfy Goal ['At(Package, C)']
+Candidate Plan Validation Result: INVALID (Robot at C does NOT equal Package at C)
+
+Running BFS Search on Full Action Set to ensure optimal solution ignores irrelevant loops:
+============================================================
+PLANNING RESULTS
+============================================================
+Initial State S0: ['At(Package, A)', 'At(Robot, A)']
+------------------------------------------------------------
+RESULT: Found plan of length 4 actions.
+------------------------------------------------------------
+Step 1: Execute PickUp(Package, A)
+        State S1: ['At(Robot, A)', 'Holding(Package)']
+Step 2: Execute Move(A, B)
+        State S2: ['At(Robot, B)', 'Holding(Package)']
+Step 3: Execute Move(B, C)
+        State S3: ['At(Robot, C)', 'Holding(Package)']
+Step 4: Execute Drop(Package, C)
+        State S4: ['At(Package, C)', 'At(Robot, C)']
+============================================================
+Full BFS Independent Verification: PASSED (Valid Plan)
+

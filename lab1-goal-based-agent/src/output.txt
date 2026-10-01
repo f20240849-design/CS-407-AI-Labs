@@ -1,0 +1,52 @@
+======================================================================
+               LAB 1: GOAL-BASED AGENT EXECUTION LOG
+======================================================================
+
+--- STEP 1: Running Unit Test Suite ---
+test_no_obstacle_traversal (test_agent.TestWarehouseAgent.test_no_obstacle_traversal)
+Check that no coordinate in the solution path is an obstacle '#'. ... ok
+test_original_map (test_agent.TestWarehouseAgent.test_original_map)
+Test pathfinding on the default assignment map. ... ok
+test_trivial_adjacent_sg (test_agent.TestWarehouseAgent.test_trivial_adjacent_sg)
+Test pathfinding when S and G are directly adjacent. ... ok
+test_unreachable_goal (test_agent.TestWarehouseAgent.test_unreachable_goal)
+Test behavior when goal G is completely walled off. ... ok
+test_valid_single_steps (test_agent.TestWarehouseAgent.test_valid_single_steps)
+Check that every step in the path moves exactly one cell orthogonally. ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- STEP 2: Running Main Warehouse Agent Demo ---
+============================================================
+       Goal-Based Agent Warehouse Pathfinding Demo
+============================================================
+
+[+] Solution Found!
+Path Length (steps): 20
+Total Nodes/States Expanded: 59
+
+Direction Sequence:
+Right -> Right -> Right -> Down -> Right -> Right -> Right -> Up -> Right -> Right -> Right -> Right -> Right -> Right -> Right -> Right -> Right -> Right -> Right -> Right
+
+Coordinate Path (Row, Column):
+[(1, 1), (1, 2), (1, 3), (1, 4), (2, 4), (2, 5), (2, 6), (2, 7), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (1, 12), (1, 13), (1, 14), (1, 15), (1, 16), (1, 17), (1, 18), (1, 19)]
+
+Warehouse Map with Solution Path ('*' marks path):
+#####################
+#S***.#************G#
+#.##****##########..#
+#....##.............#
+#.######.###.#.###..#
+#........#..........#
+#####################
+============================================================
+
+--- SUMMARY ---
+Tests Run: 5
+Errors: 0
+Failures: 0
+Overall Status: PASSED
+======================================================================

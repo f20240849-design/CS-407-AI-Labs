@@ -1,0 +1,125 @@
+============================================================
+   CONDITIONAL PROBABILITY TABLES (CPTs) - EXACT CALCULATIONS
+============================================================
+
+--- FIRST-ORDER BIGRAM MODEL CPT P(X_t | X_{t-1}) ---
+
+Context word: '<START>'
+  Total observed occurrences as context: 6
+  P(the    | <START> ) = 6/6 = 1.0000
+
+Context word: 'cat'
+  Total observed occurrences as context: 3
+  P(ran    | cat     ) = 1/3 = 0.3333
+  P(sat    | cat     ) = 2/3 = 0.6667
+
+Context word: 'dog'
+  Total observed occurrences as context: 3
+  P(ran    | dog     ) = 1/3 = 0.3333
+  P(sat    | dog     ) = 2/3 = 0.6667
+
+Context word: 'mat'
+  Total observed occurrences as context: 2
+  P(<END>  | mat     ) = 2/2 = 1.0000
+
+Context word: 'on'
+  Total observed occurrences as context: 4
+  P(the    | on      ) = 4/4 = 1.0000
+
+Context word: 'park'
+  Total observed occurrences as context: 2
+  P(<END>  | park    ) = 2/2 = 1.0000
+
+Context word: 'ran'
+  Total observed occurrences as context: 2
+  P(to     | ran     ) = 2/2 = 1.0000
+
+Context word: 'rug'
+  Total observed occurrences as context: 2
+  P(<END>  | rug     ) = 2/2 = 1.0000
+
+Context word: 'sat'
+  Total observed occurrences as context: 4
+  P(on     | sat     ) = 4/4 = 1.0000
+
+Context word: 'the'
+  Total observed occurrences as context: 12
+  P(cat    | the     ) = 3/12 = 0.2500
+  P(dog    | the     ) = 3/12 = 0.2500
+  P(mat    | the     ) = 2/12 = 0.1667
+  P(park   | the     ) = 2/12 = 0.1667
+  P(rug    | the     ) = 2/12 = 0.1667
+
+Context word: 'to'
+  Total observed occurrences as context: 2
+  P(the    | to      ) = 2/2 = 1.0000
+
+------------------------------------------------------------
+
+--- SECOND-ORDER TRIGRAM MODEL CPT P(X_t | X_{t-2}, X_{t-1}) ---
+
+Context tuple: ('<START>', '<START>')
+  Total observed occurrences as context: 6
+  P(the    | ('<START>', '<START>')) = 6/6 = 1.0000
+
+Context tuple: ('<START>', 'the')
+  Total observed occurrences as context: 6
+  P(cat    | ('<START>', 'the')) = 3/6 = 0.5000
+  P(dog    | ('<START>', 'the')) = 3/6 = 0.5000
+
+Context tuple: ('cat', 'ran')
+  Total observed occurrences as context: 1
+  P(to     | ('cat', 'ran')    ) = 1/1 = 1.0000
+
+Context tuple: ('cat', 'sat')
+  Total observed occurrences as context: 2
+  P(on     | ('cat', 'sat')    ) = 2/2 = 1.0000
+
+Context tuple: ('dog', 'ran')
+  Total observed occurrences as context: 1
+  P(to     | ('dog', 'ran')    ) = 1/1 = 1.0000
+
+Context tuple: ('dog', 'sat')
+  Total observed occurrences as context: 2
+  P(on     | ('dog', 'sat')    ) = 2/2 = 1.0000
+
+Context tuple: ('on', 'the')
+  Total observed occurrences as context: 4
+  P(mat    | ('on', 'the')     ) = 2/4 = 0.5000
+  P(rug    | ('on', 'the')     ) = 2/4 = 0.5000
+
+Context tuple: ('ran', 'to')
+  Total observed occurrences as context: 2
+  P(the    | ('ran', 'to')     ) = 2/2 = 1.0000
+
+Context tuple: ('sat', 'on')
+  Total observed occurrences as context: 4
+  P(the    | ('sat', 'on')     ) = 4/4 = 1.0000
+
+Context tuple: ('the', 'cat')
+  Total observed occurrences as context: 3
+  P(ran    | ('the', 'cat')    ) = 1/3 = 0.3333
+  P(sat    | ('the', 'cat')    ) = 2/3 = 0.6667
+
+Context tuple: ('the', 'dog')
+  Total observed occurrences as context: 3
+  P(ran    | ('the', 'dog')    ) = 1/3 = 0.3333
+  P(sat    | ('the', 'dog')    ) = 2/3 = 0.6667
+
+Context tuple: ('the', 'mat')
+  Total observed occurrences as context: 2
+  P(<END>  | ('the', 'mat')    ) = 2/2 = 1.0000
+
+Context tuple: ('the', 'park')
+  Total observed occurrences as context: 2
+  P(<END>  | ('the', 'park')   ) = 2/2 = 1.0000
+
+Context tuple: ('the', 'rug')
+  Total observed occurrences as context: 2
+  P(<END>  | ('the', 'rug')    ) = 2/2 = 1.0000
+
+Context tuple: ('to', 'the')
+  Total observed occurrences as context: 2
+  P(park   | ('to', 'the')     ) = 2/2 = 1.0000
+
+============================================================

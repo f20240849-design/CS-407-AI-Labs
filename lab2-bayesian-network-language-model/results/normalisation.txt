@@ -1,0 +1,75 @@
+============================================================
+       PROBABILITY NORMALISATION TEST RESULTS
+============================================================
+
+--- FIRST-ORDER BIGRAM MODEL NORMALISATION ---
+Context '<START> ': sum = 1.000000 [PASSED]
+  P(the    | <START> ) = 1.0000
+Context 'cat     ': sum = 1.000000 [PASSED]
+  P(ran    | cat     ) = 0.3333
+  P(sat    | cat     ) = 0.6667
+Context 'dog     ': sum = 1.000000 [PASSED]
+  P(ran    | dog     ) = 0.3333
+  P(sat    | dog     ) = 0.6667
+Context 'mat     ': sum = 1.000000 [PASSED]
+  P(<END>  | mat     ) = 1.0000
+Context 'on      ': sum = 1.000000 [PASSED]
+  P(the    | on      ) = 1.0000
+Context 'park    ': sum = 1.000000 [PASSED]
+  P(<END>  | park    ) = 1.0000
+Context 'ran     ': sum = 1.000000 [PASSED]
+  P(to     | ran     ) = 1.0000
+Context 'rug     ': sum = 1.000000 [PASSED]
+  P(<END>  | rug     ) = 1.0000
+Context 'sat     ': sum = 1.000000 [PASSED]
+  P(on     | sat     ) = 1.0000
+Context 'the     ': sum = 1.000000 [PASSED]
+  P(cat    | the     ) = 0.2500
+  P(dog    | the     ) = 0.2500
+  P(mat    | the     ) = 0.1667
+  P(park   | the     ) = 0.1667
+  P(rug    | the     ) = 0.1667
+Context 'to      ': sum = 1.000000 [PASSED]
+  P(the    | to      ) = 1.0000
+
+Bigram Normalisation Status: ALL PASSED
+
+--- SECOND-ORDER TRIGRAM MODEL NORMALISATION ---
+Context '(<START>, <START>)': sum = 1.000000 [PASSED]
+  P(the    | (<START>, <START>)) = 1.0000
+Context '(<START>, the)  ': sum = 1.000000 [PASSED]
+  P(cat    | (<START>, the)  ) = 0.5000
+  P(dog    | (<START>, the)  ) = 0.5000
+Context '(cat, ran)      ': sum = 1.000000 [PASSED]
+  P(to     | (cat, ran)      ) = 1.0000
+Context '(cat, sat)      ': sum = 1.000000 [PASSED]
+  P(on     | (cat, sat)      ) = 1.0000
+Context '(dog, ran)      ': sum = 1.000000 [PASSED]
+  P(to     | (dog, ran)      ) = 1.0000
+Context '(dog, sat)      ': sum = 1.000000 [PASSED]
+  P(on     | (dog, sat)      ) = 1.0000
+Context '(on, the)       ': sum = 1.000000 [PASSED]
+  P(mat    | (on, the)       ) = 0.5000
+  P(rug    | (on, the)       ) = 0.5000
+Context '(ran, to)       ': sum = 1.000000 [PASSED]
+  P(the    | (ran, to)       ) = 1.0000
+Context '(sat, on)       ': sum = 1.000000 [PASSED]
+  P(the    | (sat, on)       ) = 1.0000
+Context '(the, cat)      ': sum = 1.000000 [PASSED]
+  P(ran    | (the, cat)      ) = 0.3333
+  P(sat    | (the, cat)      ) = 0.6667
+Context '(the, dog)      ': sum = 1.000000 [PASSED]
+  P(ran    | (the, dog)      ) = 0.3333
+  P(sat    | (the, dog)      ) = 0.6667
+Context '(the, mat)      ': sum = 1.000000 [PASSED]
+  P(<END>  | (the, mat)      ) = 1.0000
+Context '(the, park)     ': sum = 1.000000 [PASSED]
+  P(<END>  | (the, park)     ) = 1.0000
+Context '(the, rug)      ': sum = 1.000000 [PASSED]
+  P(<END>  | (the, rug)      ) = 1.0000
+Context '(to, the)       ': sum = 1.000000 [PASSED]
+  P(park   | (to, the)       ) = 1.0000
+
+Trigram Normalisation Status: ALL PASSED
+
+============================================================
